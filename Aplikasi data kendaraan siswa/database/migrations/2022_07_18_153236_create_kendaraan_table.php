@@ -17,7 +17,7 @@ class CreateKendaraanTable extends Migration
     {
         Schema::create('kendaraan', function (Blueprint $table) {
            $table->id();
-           $table->foreignId('siswaid')->references('id')->on('siswa')->onDelete('cascade');;
+           $table->foreignId('siswaid')->references('id')->on('siswa')->onDelete('cascade');
            $table->string('nama');
            $table->string('plat_nomor')->unique();
         });

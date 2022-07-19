@@ -10,6 +10,7 @@
 		<input type="hidden" name="kirim" value="1">
 		<label>Nama : </label>
 	    <input type="text" name="nama"> <br/>
+	    <label>Pemilik : </label>
 	    <select name="pemilik">
 	    @foreach ($daftarSiswa as $siswa)
    		 <option value="{{$siswa->id}}">{{$siswa->nama}}</option>

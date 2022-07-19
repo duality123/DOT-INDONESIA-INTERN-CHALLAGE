@@ -11,9 +11,9 @@ class Siswa extends Model
     public $timestamps = false;
     protected $table = 'siswa';
 
-     public function kendaraan()
-    {
-        return $this->hasMany(Kendaraan::class);
+     public function kendrn(){
+
+        return $this->hasMany(Kendaraan::class,'id');
     }
 
 

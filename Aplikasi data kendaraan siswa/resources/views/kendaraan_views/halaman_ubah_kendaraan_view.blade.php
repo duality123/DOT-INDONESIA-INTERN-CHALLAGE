@@ -14,8 +14,9 @@
         <input type="hidden" name="id" value="{{$kendaraan->id}}">
         <label>Nama : </label>
         <input type="text" name="nama" value="{{$kendaraan->nama}}"> <br/>
-        <label>Absen : </label>
+        <label>No Plat Nomor : </label>
         <input type="text" name="plat_nomor" value="{{$kendaraan->plat_nomor}}"> <br/>
+         <label>Pemilik : </label>
         <input type="text" name="pemilik" value="{{$pemiliknya->nama}}"> <br/>
         <button class="btn btn-primary" type="submit"> Ubah </button>
     </form>

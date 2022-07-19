@@ -126,7 +126,7 @@ function cekData($id,$nama,$absen){
            throw new Exception("No Absen harus berupa angka!");
            
         }
-        if (!isset($nama) && !isset($absen)) {
+        if (!isset($nama) || !isset($absen)) {
             throw new Exception("Semua kredensial harus dipenuhi!");
         }
 

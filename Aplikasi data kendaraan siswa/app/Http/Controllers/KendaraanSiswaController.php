@@ -16,7 +16,13 @@ class KendaraanSiswaController extends Controller
 
     function index(){
         $kendaraan = Kendaraan::all()->sortBy(['nama', 'asc']); //query dengan order ascending di absen
-        return view('/kendaraan_views/daftar_kendaraan',['daftarKendaraan'=>$kendaraan]);
+        $siswanya = [];
+        foreach ($kendaraan as $k) {
+        //print_r($k->owner['nama']);
+            $siswanya[]=Siswa::firstwhere('id',$k->siswaid)['nama'];
+        }
+        
+        return view('/kendaraan_views/daftar_kendaraan',['daftarKendaraan'=>$kendaraan,'siswa'=>$siswanya]);
     }
 
     function tambah_kendaraan_view(Request $request){

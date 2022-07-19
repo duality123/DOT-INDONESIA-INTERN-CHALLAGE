@@ -13,18 +13,18 @@
 				<th>Aksi</th>
 			</tr>
 			<?php $i = 1;?>
+			<?php $x = 0;?>
 			<tr>
 			@foreach($daftarKendaraan as $kendaraan)
 			<td><?php echo $i;?></td>
 			<td>{{$kendaraan->nama}}</td>
-			@if($kendaraan->pemiliknya)
-			<td>{{$kendaraan->pemiliknya['nama']}}</td>
-			@else
-			<td>-</td>
-			@endif
+			
+			<td>{{$siswa[$x]}}</td>
 			<td>{{$kendaraan->plat_nomor}}</td>
+
 			<td><a href="kendaraan/hapus_kendaraan/{{$kendaraan->id}}">Hapus</a> <a href="kendaraan/halaman_ubah_kendaraan/{{$kendaraan->id}}">ubah</a></td>
 			<?php $i++;?>
+			<?php $x++;?>
 			</tr>
 			@endforeach
 		</table>
